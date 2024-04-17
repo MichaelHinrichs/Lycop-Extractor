@@ -25,7 +25,7 @@ namespace Lycop_Extractor
                 BinaryWriter bw = new(File.Create(path + "\\" + n + type));
 
                 if(type == ".zlib")
-                    type -= 4;
+                    size -= 4;
 
                 bw.Write(br.ReadBytes(size));
                 bw.Close();
